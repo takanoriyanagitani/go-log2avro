@@ -1,0 +1,2 @@
+{"time":"2024-12-04T01:41:18.123Z", "level":"TRACE", "msg":false, "service":"dummy-service","method":"GET","proto":"HTTP/1.1","status":200,"size":42,"referer":"-","user-agent":"Mozilla"}
+{"time":"2024-12-04T01:54:41.456Z", "level":"DEBUG", "msg":true, "service":"dummy-service","method":"GET","proto":"HTTP/1.1","status":200,"size":634,"referer":"-","user-agent":"Mozilla"}
