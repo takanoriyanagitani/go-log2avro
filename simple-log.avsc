@@ -1,0 +1,50 @@
+{
+	"type": "record",
+	"name": "SimpleLog",
+	"fields": [
+	  {"name":"time", "type": {
+		  "type": "long",
+		  "logicalType": "timestamp-micros"
+	  }},
+	  {"name":"level", "type": {
+		  "type":"enum",
+		  "name":"Level",
+		  "symbols": [
+		    "UNSPECIFIED",
+		    "TRACE",
+		    "DEBUG",
+		    "INFO",
+		    "WARN",
+		    "ERROR",
+		    "FATAL"
+		  ]
+	  }},
+	  {"name":"body", "type": [
+		"null",
+	    "string",
+		"boolean",
+		"double",
+		{
+			"type":"string",
+			"logicalType": "uuid"
+		}
+	  ]},
+	  {"name":"attributes", "type": {
+		  "type":"array",
+		  "items": {
+			  "type": "record",
+			  "name": "KeyValue",
+			  "fields": [
+			    {"name":"key", "type":"string"},
+				{"name":"val", "type": [
+				  "null",
+				  "boolean",
+				  "double",
+				  "string",
+				  {"type":"string", "logicalType": "uuid"}
+				]}
+			  ]
+		  }
+	  }}
+	]
+}
